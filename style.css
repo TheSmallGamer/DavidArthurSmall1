@@ -112,15 +112,6 @@ nav.scrolled {
     margin: 0 auto;
 }
 
-/* DIVIDER ALIGNMENT */
-.hero-divider { 
-    width: 80px; 
-    height: 1px; 
-    background: var(--text-muted); 
-    margin: 0 auto 30px auto; /* 'auto' on sides centers it */
-    opacity: 0.5; 
-}
-
 /* BUTTON ALIGNMENT */
 .hero-buttons { 
     display: flex; 
