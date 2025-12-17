@@ -75,14 +75,14 @@ nav.scrolled {
     
     /* 1. LAYOUT: Push content to the right */
     justify-content: flex-end; 
-    text-align: left; /* Keep text aligned left relative to itself */
-    padding-right: 10%; /* Spacing from the right edge */
+    text-align: left; 
+    /* INCREASED PADDING HERE to push text further right */
+    padding-right: 15%; 
 
-    /* 2. IMAGE: Pin him to the bottom-left. 
-       'auto 105%' means: Auto width, 105% height (slight zoom to cover gaps) */
+    /* 2. IMAGE: Pin him to the bottom-left. */
     background: url('assets/hero-placeholder.jpg') no-repeat left bottom / auto 105%;
     
-    /* 3. FALLBACK: Match the deep blue background */
+    /* 3. FALLBACK */
     background-color: var(--bg-dark);
 }
 
@@ -92,13 +92,12 @@ nav.scrolled {
     top: 0; left: 0; 
     width: 100%; height: 100%;
     
-    /* This gradient fades from Transparent (Left) to Solid Dark Blue (Right) */
-    /* It hides the edge of the photo seamlessly */
+    /* UPDATED GRADIENT: Brighter on the left */
     background: linear-gradient(
         90deg, 
-        rgba(11, 17, 32, 0.2) 0%,   /* Mostly clear on his face */
-        rgba(11, 17, 32, 0.8) 40%,  /* Starting to get dark in the middle */
-        rgba(11, 17, 32, 1) 100%    /* Solid blue behind the text */
+        rgba(11, 17, 32, 0.05) 0%,   /* Almost completely clear on face now */
+        rgba(11, 17, 32, 0.7) 50%,   /* Starts darkening later and softer */
+        rgba(11, 17, 32, 1) 100%    /* Solid blue behind text */
     );
     z-index: 1;
 }
@@ -107,7 +106,9 @@ nav.scrolled {
 .hero-content { 
     position: relative; 
     z-index: 2; 
-    max-width: 600px; /* Limit width so it doesn't overlap his face */
+    /* Slightly narrower so it doesn't stretch back towards the image */
+    max-width: 550px; 
+    padding: 0 20px;
 }
 
 /* DIVIDER ALIGNMENT */
