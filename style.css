@@ -66,7 +66,7 @@ nav.scrolled {
 .btn-nav { border: 1px solid var(--text-muted); padding: 8px 20px; border-radius: 2px; }
 .btn-nav:hover { border-color: var(--text-light); background: var(--text-light); color: var(--bg-dark) !important; }
 
-/* HERO (Split Layout with Gradient Mask) */
+/* HERO (Split Layout - Text Pushed Right) */
 .hero {
     height: 100vh;
     position: relative;
@@ -76,13 +76,14 @@ nav.scrolled {
     /* 1. LAYOUT: Push content to the right */
     justify-content: flex-end; 
     text-align: left; 
-    /* INCREASED PADDING HERE to push text further right */
-    padding-right: 15%; 
+    
+    /* 2. SPACING: 5% keeps it close to the right edge but not touching it */
+    padding-right: 5%; 
 
-    /* 2. IMAGE: Pin him to the bottom-left. */
+    /* 3. IMAGE: Pin him to the bottom-left */
     background: url('assets/hero-placeholder.jpg') no-repeat left bottom / auto 105%;
     
-    /* 3. FALLBACK */
+    /* 4. FALLBACK */
     background-color: var(--bg-dark);
 }
 
@@ -106,8 +107,8 @@ nav.scrolled {
 .hero-content { 
     position: relative; 
     z-index: 2; 
-    /* Slightly narrower so it doesn't stretch back towards the image */
-    max-width: 550px; 
+    /* Controls how wide the text block is allowed to grow */
+    max-width: 600px; 
     padding: 0 20px;
 }
 
