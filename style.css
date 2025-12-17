@@ -66,50 +66,50 @@ nav.scrolled {
 .btn-nav { border: 1px solid var(--text-muted); padding: 8px 20px; border-radius: 2px; }
 .btn-nav:hover { border-color: var(--text-light); background: var(--text-light); color: var(--bg-dark) !important; }
 
-/* HERO (Split Layout - Text Pushed Right) */
+/* HERO (Bottom-Center Layout) */
 .hero {
     height: 100vh;
     position: relative;
     display: flex;
-    align-items: center;
     
-    /* 1. LAYOUT: Push content to the right */
-    justify-content: flex-end; 
-    text-align: left; 
+    /* 1. VERTICAL: Push content to the bottom */
+    align-items: flex-end;
     
-    /* 2. SPACING: 5% keeps it close to the right edge but not touching it */
-    padding-right: 5%; 
+    /* 2. HORIZONTAL: Center the content */
+    justify-content: center;
+    text-align: center;
+    
+    /* 3. SPACING: Lift text up from the bottom edge */
+    padding-bottom: 8vh; 
+    padding-left: 20px;
+    padding-right: 20px;
 
-    /* 3. IMAGE: Pin him to the bottom-left */
-    background: url('assets/hero-placeholder.jpg') no-repeat left bottom / auto 105%;
+    /* 4. IMAGE: Center Top ensures his head doesn't get cut off */
+    background: url('assets/hero-placeholder.jpg') no-repeat center top / cover;
     
-    /* 4. FALLBACK */
     background-color: var(--bg-dark);
 }
 
-/* THE MAGIC TRICK: Gradient Fade */
+/* GRADIENT: Fades from Dark (Bottom) to Clear (Top) */
 .hero-overlay {
     position: absolute;
     top: 0; left: 0; 
     width: 100%; height: 100%;
     
-    /* UPDATED GRADIENT: Brighter on the left */
     background: linear-gradient(
-        90deg, 
-        rgba(11, 17, 32, 0.05) 0%,   /* Almost completely clear on face now */
-        rgba(11, 17, 32, 0.7) 50%,   /* Starts darkening later and softer */
-        rgba(11, 17, 32, 1) 100%    /* Solid blue behind text */
+        to top, 
+        rgba(11, 17, 32, 1) 0%,    /* Solid dark at feet/text area */
+        rgba(11, 17, 32, 0.8) 25%, /* Starts fading quickly */
+        rgba(11, 17, 32, 0) 60%    /* Completely clear on his face */
     );
     z-index: 1;
 }
 
-/* CONTENT POSITIONING */
 .hero-content { 
     position: relative; 
     z-index: 2; 
-    /* Controls how wide the text block is allowed to grow */
-    max-width: 600px; 
-    padding: 0 20px;
+    max-width: 800px; 
+    margin: 0 auto;
 }
 
 /* DIVIDER ALIGNMENT */
@@ -117,15 +117,16 @@ nav.scrolled {
     width: 80px; 
     height: 1px; 
     background: var(--text-muted); 
-    margin: 30px 0; /* '0' keeps it left-aligned under the text */
+    margin: 0 auto 30px auto; /* 'auto' on sides centers it */
     opacity: 0.5; 
 }
 
 /* BUTTON ALIGNMENT */
-.hero-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: flex-start; /* Align buttons to the left of the text block */
+.hero-buttons { 
+    display: flex; 
+    gap: 20px; 
+    justify-content: center; /* Center buttons horizontally */
+    margin-top: 30px;
 }
 .hero-content { 
     position: relative; 
