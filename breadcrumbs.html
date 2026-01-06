@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breadcrumbs | David Small</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Specific adjustments for the blog layout */
+        .blog-header {
+            margin-top: 150px;
+            margin-bottom: 80px;
+            text-align: center;
+        }
+        .post-meta {
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .blog-post {
+            margin-bottom: 100px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .blog-post h2 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+        }
+        .read-more {
+            margin-top: 30px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="scrolled">
+        <div class="logo">Breadcrumbs</div>
+        
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#schedule">Schedule</a></li>
+            <li><a href="#" id="contact-btn" class="btn-nav">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="blog-header">
+        <h1 style="font-size: 4.5rem;">Breadcrumbs</h1>
+        <p class="subtitle">Notes on Music, Life, and the Stage</p>
+    </header>
+
+    <main class="container">
+        <div class="content-width">
+            
+            <article class="blog-post">
+                <span class="post-meta">January 6, 2026</span>
+                <h2>The Architecture of Scarpia</h2>
+                <p class="lead-text">
+                    In my upcoming return to <em>Tosca</em> at Boston Symphony Hall, I've found myself revisiting the psychological framing of Scarpia. He is often played as a monster, but the music suggests something far more complex—a terrifying elegance.
+                </p>
+                <a href="#" class="btn btn-outline read-more">Keep Reading</a>
+            </article>
+
+            <article class="blog-post">
+                <span class="post-meta">December 15, 2025</span>
+                <h2>Finding Silence in the Messiah</h2>
+                <p class="lead-text">
+                    Performing Handel's <em>Messiah</em> with the Handel & Haydn Society is always a highlight. There is a specific resonance in Trinity Church that requires a different kind of vocal control—one that honors the architecture as much as the score.
+                </p>
+                <a href="#" class="btn btn-outline read-more">Keep Reading</a>
+            </article>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">DAS</div>
+            <p class="copyright">&copy; 2026 David Small | Breadcrumbs Blog</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+    </script>
+
+</body>
+</html>
