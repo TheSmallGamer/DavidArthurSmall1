@@ -175,18 +175,18 @@
             <h2>Get in Touch</h2>
             <p class="modal-subtitle">For booking inquiries or just to say hello.</p>
             
-            <form class="modal-form">
+            <form class="modal-form" name="contact" method="POST" data-netlify="true" action="/success.html">
                 <div class="form-group">
                     <label>Name</label>
-                    <input type="text" placeholder="Your Name">
+                    <input type="text" name="name" placeholder="Your Name" required>
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" placeholder="name@example.com">
+                    <input type="email" name="email" placeholder="name@example.com" required>
                 </div>
                 <div class="form-group">
                     <label>Message</label>
-                    <textarea rows="4" placeholder="How can we help?"></textarea>
+                    <textarea name="message" rows="4" placeholder="How can we help?" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-full">Send Message</button>
             </form>
@@ -312,4 +312,5 @@
     </script>
 </body>
 </html>
+
 
